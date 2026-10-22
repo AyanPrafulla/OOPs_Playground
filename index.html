@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OOPs Playground — Interactive Java OOP Learning Platform</title>
+  <meta name="description" content="Master Object-Oriented Programming (OOP) in Java through interactive visual memory models, UML diagrams, dynamic dispatch simulators, and hands-on quizzes.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lessons.css">
+  <link rel="stylesheet" href="css/simulator.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233B82F6'><rect x='2' y='7' width='20' height='14' rx='2'/><path d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/></svg>">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-nav" role="banner">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" id="nav-brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </span>
+        <span>OOPs <span style="color: var(--primary-light);">Playground</span></span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+          <li><a href="#learn" class="nav-link" id="link-learn">Learn OOP</a></li>
+          <li><a href="#playground" class="nav-link" id="link-playground">Playground</a></li>
+          <li><a href="#quiz" class="nav-link" id="link-quiz">Quiz</a></li>
+          <li><a href="#progress" class="nav-link" id="link-progress">Progress</a></li>
+          <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#playground" class="btn btn-sm btn-primary" id="btn-quick-play">Launch Studio</a>
+        <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            Interactive Java OOP Visualizer
+          </div>
+          <h1 class="hero-title">
+            Understand OOP.<br>
+            <span class="text-gradient">Visualize Code.</span><br>
+            Learn by Doing.
+          </h1>
+          <p class="hero-desc">
+            Explore Java's object-oriented programming concepts through interactive examples, visual class diagrams, and hands-on quizzes. See stack references, heap allocations, and dynamic dispatch come alive.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#learn" class="btn btn-lg btn-primary" id="hero-btn-learn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              Start Learning
+            </a>
+            <a href="#playground" class="btn btn-lg btn-secondary" id="hero-btn-playground">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Explore Playground
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-preview-box" aria-hidden="true">
+          <div class="preview-box-header">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="preview-box-title">JVM_Memory_Model.java</span>
+            <span class="badge badge-blue">Interactive Preview</span>
+          </div>
+          <div class="hero-code-snippet">
+<pre><code><span style="color:#64748B;">// 1. Instantiating Object in Heap</span>
+<span style="color:#38BDF8;">Car</span> myCar = <span style="color:#F43F5E;">new</span> <span style="color:#38BDF8;">Car</span>();
+myCar.color = <span style="color:#34D399;">"Red"</span>;
+myCar.speed = <span style="color:#FBBF24;">60</span>;
+
+<span style="color:#64748B;">// 2. Dynamic Dispatch Resolution</span>
+<span style="color:#38BDF8;">Animal</span> pet = <span style="color:#F43F5E;">new</span> <span style="color:#38BDF8;">Dog</span>();
+pet.makeSound(); <span style="color:#64748B;">// Dispatches to Dog's vtable</span></code></pre>
+          </div>
+          <div class="hero-stats-bar">
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">5</span>
+              <span class="hero-stat-label">Core Modules</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">15</span>
+              <span class="hero-stat-label">Quiz Questions</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">100%</span>
+              <span class="hero-stat-label">Interactive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5 OOP CONCEPTS CARDS SECTION
+         ========================================================================= -->
+    <section class="section section-alt" id="modules-overview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curriculum Overview</span>
+          <h2 class="section-title">The Pillars of Object-Oriented Java</h2>
+          <p class="section-subtitle">
+            Master the essential concepts from foundational class blueprints to complex runtime polymorphism and abstract contracts.
+          </p>
+        </div>
+
+        <div class="cards-grid" id="concept-cards-container">
+          <!-- Card 1: Classes & Objects -->
+          <article class="concept-card" id="card-classes-objects">
+            <div class="card-top">
+              <div class="card-icon-wrap" style="color: #34D399;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <span class="badge badge-emerald">Beginner</span>
+            </div>
+            <h3 class="card-title">Classes & Objects</h3>
+            <p class="card-desc">
+              Understand classes as blueprints and objects as concrete instances occupying JVM Heap memory with distinct state.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Module 1 • 8 mins</span>
+              <button type="button" class="btn btn-sm btn-outline card-learn-btn" data-lesson="classes-objects">Learn More →</button>
+            </div>
+          </article>
+
+          <!-- Card 2: Inheritance -->
+          <article class="concept-card" id="card-inheritance">
+            <div class="card-top">
+              <div class="card-icon-wrap" style="color: #60A5FA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 0 3-3m-3 3-3-3"/><rect x="6" y="8" width="12" height="6" rx="1"/><path d="M6 14v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4"/><path d="M12 14v6"/></svg>
+              </div>
+              <span class="badge badge-blue">Hierarchy</span>
+            </div>
+            <h3 class="card-title">Inheritance</h3>
+            <p class="card-desc">
+              Discover how child classes extend parent superclasses to reuse methods, enforce single inheritance, and model "IS-A" relationships.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Module 2 • 10 mins</span>
+              <button type="button" class="btn btn-sm btn-outline card-learn-btn" data-lesson="inheritance">Learn More →</button>
+            </div>
+          </article>
+
+          <!-- Card 3: Encapsulation -->
+          <article class="concept-card" id="card-encapsulation">
+            <div class="card-top">
+              <div class="card-icon-wrap" style="color: #A78BFA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <span class="badge badge-violet">Security</span>
+            </div>
+            <h3 class="card-title">Encapsulation</h3>
+            <p class="card-desc">
+              Learn to protect internal state by declaring fields private and exposing validated public getter and setter access gates.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Module 3 • 10 mins</span>
+              <button type="button" class="btn btn-sm btn-outline card-learn-btn" data-lesson="encapsulation">Learn More →</button>
+            </div>
+          </article>
+
+          <!-- Card 4: Polymorphism -->
+          <article class="concept-card" id="card-polymorphism">
+            <div class="card-top">
+              <div class="card-icon-wrap" style="color: #FBBF24;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <span class="badge badge-amber">Dynamic</span>
+            </div>
+            <h3 class="card-title">Polymorphism</h3>
+            <p class="card-desc">
+              See how the same method call produces different behaviors at runtime through method overriding and dynamic method dispatch.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Module 4 • 12 mins</span>
+              <button type="button" class="btn btn-sm btn-outline card-learn-btn" data-lesson="polymorphism">Learn More →</button>
+            </div>
+          </article>
+
+          <!-- Card 5: Abstraction -->
+          <article class="concept-card" id="card-abstraction">
+            <div class="card-top">
+              <div class="card-icon-wrap" style="color: #F87171;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <span class="badge badge-rose">Contract</span>
+            </div>
+            <h3 class="card-title">Abstraction</h3>
+            <p class="card-desc">
+              Explore the process of hiding internal mathematical complexity and enforcing architectural contracts via abstract classes.
+            </p>
+            <div class="card-footer">
+              <span style="font-size: 0.8rem; color: var(--text-dim);">Module 5 • 10 mins</span>
+              <button type="button" class="btn btn-sm btn-outline card-learn-btn" data-lesson="abstraction">Learn More →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         GUIDED LESSONS SECTION
+         ========================================================================= -->
+    <section class="section" id="learn">
+      <div class="container lessons-container">
+        <div class="section-header">
+          <span class="section-tag">Structured Lessons</span>
+          <h2 class="section-title">Deep Dive Curriculum</h2>
+          <p class="section-subtitle">
+            Step-by-step conceptual explanations, real-world analogies, verified Java code blocks, common pitfalls, and quick knowledge-checks.
+          </p>
+        </div>
+
+        <!-- Lesson Switcher Tabs -->
+        <nav class="lesson-nav-tabs" role="tablist" aria-label="Lesson Modules">
+          <button type="button" class="lesson-tab-btn active" role="tab" id="tab-classes-objects" data-lesson="classes-objects" aria-selected="true">
+            <span class="lesson-tab-check" id="check-classes-objects">○</span>
+            1. Classes & Objects
+          </button>
+          <button type="button" class="lesson-tab-btn" role="tab" id="tab-inheritance" data-lesson="inheritance" aria-selected="false">
+            <span class="lesson-tab-check" id="check-inheritance">○</span>
+            2. Inheritance
+          </button>
+          <button type="button" class="lesson-tab-btn" role="tab" id="tab-encapsulation" data-lesson="encapsulation" aria-selected="false">
+            <span class="lesson-tab-check" id="check-encapsulation">○</span>
+            3. Encapsulation
+          </button>
+          <button type="button" class="lesson-tab-btn" role="tab" id="tab-polymorphism" data-lesson="polymorphism" aria-selected="false">
+            <span class="lesson-tab-check" id="check-polymorphism">○</span>
+            4. Polymorphism
+          </button>
+          <button type="button" class="lesson-tab-btn" role="tab" id="tab-abstraction" data-lesson="abstraction" aria-selected="false">
+            <span class="lesson-tab-check" id="check-abstraction">○</span>
+            5. Abstraction
+          </button>
+        </nav>
+
+        <!-- Dynamic Lesson Detail Container -->
+        <div class="lesson-card-wrapper" id="lesson-detail-container" role="tabpanel">
+          <!-- Populated dynamically by main.js from LESSONS_DATA -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         INTERACTIVE PLAYGROUND STUDIO SECTION
+         ========================================================================= -->
+    <section class="section section-alt" id="playground">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hands-On Studio</span>
+          <h2 class="section-title">Interactive OOP Playground</h2>
+          <p class="section-subtitle">
+            Manipulate live object instances, inspect memory allocations, trace method invocations, and observe synchronized Java outputs.
+          </p>
+        </div>
+
+        <div class="playground-studio-wrapper">
+          <!-- Studio Header Tabs -->
+          <div class="studio-tab-header">
+            <div class="studio-tabs" role="tablist" aria-label="Playground Simulators">
+              <button type="button" class="studio-tab-btn active" id="sim-tab-classes-objects" data-sim="classes-objects">
+                Classes & Objects
+              </button>
+              <button type="button" class="studio-tab-btn" id="sim-tab-inheritance" data-sim="inheritance">
+                Inheritance
+              </button>
+              <button type="button" class="studio-tab-btn" id="sim-tab-encapsulation" data-sim="encapsulation">
+                Encapsulation
+              </button>
+              <button type="button" class="studio-tab-btn" id="sim-tab-polymorphism" data-sim="polymorphism">
+                Polymorphism
+              </button>
+              <button type="button" class="studio-tab-btn" id="sim-tab-abstraction" data-sim="abstraction">
+                Abstraction
+              </button>
+            </div>
+
+            <div class="studio-controls-bar">
+              <button type="button" class="btn btn-sm btn-secondary" id="studio-reset-btn" title="Reset current simulation state">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                Reset State
+              </button>
+              <button type="button" class="btn btn-sm btn-secondary" id="studio-clear-console-btn" title="Clear terminal logs">
+                Clear Console
+              </button>
+            </div>
+          </div>
+
+          <!-- Studio Main Workspace Grid -->
+          <div class="studio-grid">
+            <!-- Left: Interactive Canvas -->
+            <div class="simulator-canvas-pane" id="simulator-canvas">
+              <!-- Dynamically populated based on active tab -->
+            </div>
+
+            <!-- Right: Synchronized Java Code & Console Output -->
+            <div class="simulator-inspector-pane">
+              <div class="inspector-section-header">
+                <span>SYNCHRONIZED JAVA SOURCE</span>
+                <span class="badge badge-blue">Java SE 17</span>
+              </div>
+              <pre class="inspector-code-block" id="inspector-code"><code>// Initializing JVM Playground...</code></pre>
+
+              <div class="inspector-terminal-block">
+                <div class="inspector-section-header">
+                  <span>TERMINAL OUTPUT (STANDARD OUT)</span>
+                  <span style="color: #10B981;">● Online</span>
+                </div>
+                <div class="inspector-terminal-body" id="inspector-terminal">Welcome to OOPs Playground Terminal Console.
+Select any interactive control on the left to simulate Java execution.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         QUIZ MODULE SECTION
+         ========================================================================= -->
+    <section class="section" id="quiz">
+      <div class="container quiz-section-wrapper">
+        <div class="section-header">
+          <span class="section-tag">Knowledge Assessment</span>
+          <h2 class="section-title">15-Question OOP Mastery Quiz</h2>
+          <p class="section-subtitle">
+            Validate your understanding across Classes, Inheritance, Encapsulation, Polymorphism, and Abstraction with immediate educational rationales.
+          </p>
+        </div>
+
+        <!-- 1. Active Question View -->
+        <div class="quiz-card" id="quiz-active-card">
+          <div class="quiz-header-bar">
+            <div>
+              <span class="badge badge-blue" id="quiz-cat-badge">Classes & Objects</span>
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-fill" id="quiz-progress-fill" style="width: 7%;"></div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 0.825rem; font-weight: 600; color: var(--text-dim);" id="quiz-counter-badge">Question 1 of 15</span>
+              <div style="font-size: 0.75rem; color: var(--text-dim);" id="quiz-progress-label">7% completed</div>
+            </div>
+          </div>
+
+          <h3 class="quiz-question-title" id="quiz-question-text">Loading question...</h3>
+
+          <div class="quiz-options-list" id="quiz-options-container" role="radiogroup">
+            <!-- Dynamic option buttons -->
+          </div>
+
+          <!-- Real-Time Feedback Box -->
+          <div class="quiz-feedback-box" id="quiz-feedback-container" style="display: none;"></div>
+
+          <div class="quiz-footer-actions">
+            <button type="button" class="btn btn-primary" id="quiz-submit-btn" disabled>
+              Submit Answer
+            </button>
+            <button type="button" class="btn btn-primary" id="quiz-next-btn" style="display: none;">
+              Next Question →
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Final Results View -->
+        <div class="quiz-card" id="quiz-results-card" style="display: none;">
+          <!-- Rendered by quiz.js -->
+        </div>
+
+        <!-- 3. Review Mistakes View -->
+        <div class="quiz-card" id="quiz-review-card" style="display: none;">
+          <!-- Rendered by quiz.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         LEARNING PROGRESS SECTION
+         ========================================================================= -->
+    <section class="section section-alt" id="progress">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Learning Dashboard</span>
+          <h2 class="section-title">Your Progress & Achievements</h2>
+          <p class="section-subtitle">
+            Track completed lesson modules, quiz performance, and practical simulations across browser sessions.
+          </p>
+        </div>
+
+        <div class="progress-grid">
+          <!-- Summary Progress Card -->
+          <div class="progress-summary-card">
+            <div class="progress-ring-container">
+              <svg width="140" height="140" viewBox="0 0 140 140" style="transform: rotate(-90deg);">
+                <circle cx="70" cy="70" r="58" stroke="rgba(255, 255, 255, 0.08)" stroke-width="10" fill="none"></circle>
+                <circle id="progress-svg-circle" cx="70" cy="70" r="58" stroke="url(#progressGradient)" stroke-width="10" fill="none"
+                        stroke-dasharray="364.4" stroke-dashoffset="364.4" stroke-linecap="round" style="transition: stroke-dashoffset 0.5s ease;"></circle>
+                <defs>
+                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3B82F6"></stop>
+                    <stop offset="100%" stop-color="#8B5CF6"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="progress-ring-text">
+                <span class="progress-ring-percent" id="progress-percentage-display">0%</span>
+                <span class="progress-ring-label">Completed</span>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;" id="progress-status-heading">Beginner Explorer</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;" id="progress-summary-text">
+              Complete lessons and test memory models to master Java OOP fundamentals.
+            </p>
+
+            <div style="display: flex; gap: 0.75rem; width: 100%;">
+              <a href="#learn" class="btn btn-sm btn-primary" style="flex: 1;">Continue Learning</a>
+              <button type="button" class="btn btn-sm btn-danger-soft" id="btn-reset-all-progress" title="Clear saved LocalStorage progress">Reset</button>
+            </div>
+          </div>
+
+          <!-- Metrics & Checklist -->
+          <div class="progress-metrics-list">
+            <!-- Metric 1: Classes & Objects -->
+            <div class="progress-metric-item" id="p-item-classes-objects">
+              <div class="metric-info">
+                <h4>1. Classes & Objects</h4>
+                <p>Blueprint definition & JVM Heap allocation</p>
+              </div>
+              <span class="metric-status-check status-pending" id="p-status-classes-objects">Pending</span>
+            </div>
+
+            <!-- Metric 2: Inheritance -->
+            <div class="progress-metric-item" id="p-item-inheritance">
+              <div class="metric-info">
+                <h4>2. Inheritance</h4>
+                <p>Single class inheritance & superclass method lookup</p>
+              </div>
+              <span class="metric-status-check status-pending" id="p-status-inheritance">Pending</span>
+            </div>
+
+            <!-- Metric 3: Encapsulation -->
+            <div class="progress-metric-item" id="p-item-encapsulation">
+              <div class="metric-info">
+                <h4>3. Encapsulation</h4>
+                <p>Data hiding & validated getter/setter access gates</p>
+              </div>
+              <span class="metric-status-check status-pending" id="p-status-encapsulation">Pending</span>
+            </div>
+
+            <!-- Metric 4: Polymorphism -->
+            <div class="progress-metric-item" id="p-item-polymorphism">
+              <div class="metric-info">
+                <h4>4. Polymorphism</h4>
+                <p>Runtime dynamic method dispatch & method overriding</p>
+              </div>
+              <span class="metric-status-check status-pending" id="p-status-polymorphism">Pending</span>
+            </div>
+
+            <!-- Metric 5: Abstraction -->
+            <div class="progress-metric-item" id="p-item-abstraction">
+              <div class="metric-info">
+                <h4>5. Abstraction</h4>
+                <p>Abstract class contracts & concrete implementation</p>
+              </div>
+              <span class="metric-status-check status-pending" id="p-status-abstraction">Pending</span>
+            </div>
+
+            <!-- Quiz Stats Pill -->
+            <div class="progress-metric-item" style="background: rgba(59, 130, 246, 0.08); border-color: rgba(59, 130, 246, 0.25);">
+              <div class="metric-info">
+                <h4 style="color: var(--primary-light);">15-Question Quiz Record</h4>
+                <p id="quiz-record-label">No quiz attempts yet. Test your knowledge anytime!</p>
+              </div>
+              <a href="#quiz" class="btn btn-sm btn-outline">Take Quiz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT & ARCHITECTURE SECTION
+         ========================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Project Documentation</span>
+          <h2 class="section-title">About OOPs Playground</h2>
+          <p class="section-subtitle">
+            An interactive educational platform designed to make abstract Java object-oriented principles intuitive through visual computing models.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Mission & Pedagogical Rationale
+            </h3>
+            <p>
+              Beginners learning Object-Oriented Programming frequently struggle with invisible abstractions: the distinction between Stack reference variables and Heap objects, the resolution mechanism of method overriding, and the defensive rationale behind private state encapsulation.
+            </p>
+            <p>
+              <strong>OOPs Playground</strong> solves this cognitive gap by rendering the underlying computer science mechanics—animating memory blocks, drawing UML method lookup paths, and providing verified Java code side-by-side with simulated console output.
+            </p>
+            <div class="tech-tag-list">
+              <span class="tech-tag">HTML5 Semantic</span>
+              <span class="tech-tag">Modern CSS3</span>
+              <span class="tech-tag">Vanilla JavaScript</span>
+              <span class="tech-tag">Zero Dependencies</span>
+              <span class="tech-tag">LocalStorage API</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Architectural Constraints & Roadmap
+            </h3>
+            <p>
+              <strong>Execution Model:</strong> This application runs as a static client-side educational simulation. It intentionally simulates Java execution rules in pure JavaScript rather than sending arbitrary code to a remote backend JVM compiler, guaranteeing instant responsiveness, zero latency, and safe offline execution.
+            </p>
+            <p>
+              <strong>Future Scope:</strong> Potential enhancements include WebAssembly-based bytecode verification, expanded design pattern modules (Singleton, Factory, Observer), and interactive code-editing challenges.
+            </p>
+            <div class="tech-tag-list">
+              <span class="tech-tag">Static Frontend</span>
+              <span class="tech-tag">GitHub Pages Ready</span>
+              <span class="tech-tag">Academic Demo Grade</span>
+              <span class="tech-tag">WCAG Contrast Accessible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo" style="margin-bottom: 0.5rem;">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </span>
+            <span>OOPs Playground</span>
+          </a>
+          <p>
+            Interactive educational platform for visual learning of Java Object-Oriented Programming concepts.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="#learn" class="footer-learn-link" data-lesson="classes-objects">Classes & Objects</a></li>
+            <li><a href="#learn" class="footer-learn-link" data-lesson="inheritance">Inheritance</a></li>
+            <li><a href="#learn" class="footer-learn-link" data-lesson="encapsulation">Encapsulation</a></li>
+            <li><a href="#learn" class="footer-learn-link" data-lesson="polymorphism">Polymorphism</a></li>
+            <li><a href="#learn" class="footer-learn-link" data-lesson="abstraction">Abstraction</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Interactive Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#playground">Playground Studio</a></li>
+            <li><a href="#quiz">15-Question Quiz</a></li>
+            <li><a href="#progress">Learning Progress</a></li>
+            <li><a href="#about">Project Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>OOPs Playground — Open-Source Java OOP Educational Platform</div>
+        <div>Released under the MIT License • Built with Vanilla Web Standards</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/simulator.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
