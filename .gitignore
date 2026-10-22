@@ -1,0 +1,28 @@
+# Environment & Secrets
+.env
+.env*.local
+*.key
+*.pem
+*.secret
+*credentials*
+*apikey*
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# OS Temporary Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / Scratch Files
+scratch/
+temp/
+*.log
